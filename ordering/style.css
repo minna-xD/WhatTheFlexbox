@@ -34,9 +34,11 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box {
-  flex:1;
+  flex:1; /* distributes width evenly */
 }
 
+/* sort of like a z-index 
+   ordering messes with the text selection */
 .box3 {
   order:1;
 }
