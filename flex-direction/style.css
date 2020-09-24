@@ -33,9 +33,27 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
   display:flex;
   border:10px solid goldenrod;
   min-height:100vh;
-  flex-wrap:wrap;
+  /* depends on the language in the browser too
+
+  default, main axis left to right, cross axis top to bottom
+    flex-direction: row; 
+  main axis top to bottom, cross axis left to right
+    flex-direction: column;
+  right to left
+    flex-direction: row-reverse;
+  bottom to top
+    flex-direction: column-reverse;
+  */
+  flex-wrap: wrap; /* nowrap, wrap, wrap-reverse */
+
 }
 
 .box {
-  width:33.3333333%;
+  /* too big a width isn't used */
+  width: 33.33333%;
+  /* not part of the box model so will break when added to 33.3%
+    margin: 10px; 
+  therefore, you can calculate it:
+    width:calc(33.3333333% - 20px);
+  */
 }
